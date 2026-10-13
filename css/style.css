@@ -2043,6 +2043,90 @@ textarea.form-control {
   box-shadow: var(--shadow-glow);
 }
 
+/* Floating WhatsApp Quick Connect Button */
+.whatsapp-float-btn {
+  position: fixed;
+  bottom: 28px;
+  left: 28px;
+  height: 48px;
+  padding: 0 18px 0 14px;
+  border-radius: var(--radius-full);
+  background: #25D366;
+  color: #ffffff !important;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4), 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 99;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.whatsapp-float-btn i {
+  font-size: 1.45rem;
+  color: #ffffff;
+  animation: pulse-whatsapp 2.5s infinite;
+}
+
+.whatsapp-float-btn:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6), 0 4px 12px rgba(0, 0, 0, 0.2);
+  background: #22bf5b;
+  color: #ffffff !important;
+}
+
+@keyframes pulse-whatsapp {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+@media (max-width: 640px) {
+  .whatsapp-float-btn {
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    justify-content: center;
+    bottom: 20px;
+    left: 20px;
+  }
+  .whatsapp-float-label {
+    display: none;
+  }
+}
+
+/* WhatsApp Contact Card & Elements */
+.whatsapp-method-card {
+  border-color: rgba(37, 211, 102, 0.35) !important;
+  background: rgba(37, 211, 102, 0.04);
+}
+
+.whatsapp-method-card:hover {
+  border-color: #25D366 !important;
+  background: rgba(37, 211, 102, 0.1) !important;
+  box-shadow: 0 0 20px rgba(37, 211, 102, 0.25);
+  transform: translateX(6px);
+}
+
+.whatsapp-icon-bg {
+  color: #25D366 !important;
+  background: rgba(37, 211, 102, 0.15) !important;
+  border: 1px solid rgba(37, 211, 102, 0.35);
+}
+
+.whatsapp-hero-btn:hover {
+  border-color: #25D366 !important;
+  box-shadow: 0 0 18px rgba(37, 211, 102, 0.35);
+}
+
+.footer-link.whatsapp-link:hover {
+  color: #25D366 !important;
+  border-color: #25D366 !important;
+  box-shadow: 0 0 15px rgba(37, 211, 102, 0.4);
+}
+
 /* Back to Top Floating Button */
 .back-to-top {
   position: fixed;
